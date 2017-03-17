@@ -8,9 +8,9 @@
      #+END_SRC
 ** Theme
    #+BEGIN_SRC emacs-lisp
-     (use-package base16-theme
+     (use-package suscolors-theme
        :ensure t)
-     (load-theme 'base16-default-dark t)
+     (load-theme 'suscolors t)
    #+END_SRC
 ** Basic Settings
    #+BEGIN_SRC emacs-lisp
