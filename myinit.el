@@ -3,14 +3,15 @@
 (menu-bar-mode -1)
 (scroll-bar-mode -1)
 
-(use-package base16-theme
+(use-package zenburn-theme
   :ensure t)
-(load-theme 'base16-default-dark t)
+(load-theme 'zenburn t)
 
 (fset 'yes-or-no-p 'y-or-n-p)
 (setq-default indent-tabs-mode nil)
 (set-default 'truncate-lines t)
-(setq column-number-mode t)
+
+(add-hook 'find-file-hook (lambda () (linum-mode 1)))
 (windmove-default-keybindings 'meta)
 
 (custom-set-variables
@@ -44,6 +45,25 @@
 
 (use-package helm
   :ensure t)
+
+(setq jedi:setup-keys t)
+(setq jedi:use-shortcuts t)
+
+(use-package jedi
+:ensure t)
+
+(add-hook 'python-mode-hook 'jedi:setup)
+(setq jedi:complete-on-dot t)
+
+(use-package flycheck
+:ensure t)
+
+(global-flycheck-mode)
+
+(use-package py-autopep8
+:ensure t)
+
+(add-hook 'python-mode-hook 'py-autopep8-enable-on-save)
 
 (use-package json-mode
 :ensure t)

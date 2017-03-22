@@ -21,7 +21,8 @@
  '(initial-frame-alist (quote ((fullscreen . maximized))))
  '(package-selected-packages
    (quote
-    (jdee jedi jedi-core sublimity helm-gitlab chess confluence go-playground go-mode org-bullets auto-complete use-package base16-theme))))
+    (yasnippet yaml-mode use-package suscolors-theme sqlite s pyvenv magit json-mode highlight-indentation helm find-file-in-project company auto-complete))))
+
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

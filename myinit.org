@@ -8,16 +8,17 @@
      #+END_SRC
 ** Theme
    #+BEGIN_SRC emacs-lisp
-     (use-package suscolors-theme
+     (use-package zenburn-theme
        :ensure t)
-     (load-theme 'suscolors t)
+     (load-theme 'zenburn t)
    #+END_SRC
 ** Basic Settings
    #+BEGIN_SRC emacs-lisp
      (fset 'yes-or-no-p 'y-or-n-p)
      (setq-default indent-tabs-mode nil)
      (set-default 'truncate-lines t)
-     (setq column-number-mode t)
+     
+     (add-hook 'find-file-hook (lambda () (linum-mode 1)))
      (windmove-default-keybindings 'meta)
 
      (custom-set-variables
@@ -68,15 +69,39 @@
 #+END_SRC
 * Programming
 ** Python
-   #+BEGIN_SRC emacs
+*** Autocomplete
+   #+BEGIN_SRC emacs-lisp
+   (setq jedi:setup-keys t)
+   (setq jedi:use-shortcuts t)
 
-(use-package anaconda-mode
-  :ensure t
-  (add-hook 'python-mode-hook 'anaconda-mode)
-  (add-hook 'python-mode-hook 'anaconda-eldoc-mode)
+   (use-package jedi
+   :ensure t)
+
+   (add-hook 'python-mode-hook 'jedi:setup)
+   (setq jedi:complete-on-dot t)  
 
    #+END_SRC
    
+*** Spell Checker
+   #+BEGIN_SRC emacs-lisp
+   
+   (use-package flycheck
+   :ensure t)
+
+   (global-flycheck-mode)  
+
+   #+END_SRC
+  
+*** PEP8
+   #+BEGIN_SRC emacs-lisp
+   
+   (use-package py-autopep8
+   :ensure t)
+
+   (add-hook 'python-mode-hook 'py-autopep8-enable-on-save)
+
+   #+END_SRC
+
 ** Dataformats
    #+BEGIN_SRC emacs-lisp
    (use-package json-mode
