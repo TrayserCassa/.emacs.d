@@ -23,13 +23,13 @@
       `((".*" ,temporary-file-directory t)))
 
 (global-set-key (kbd "<f1>") 'describe-mode) 
-(global-set-key (kbd "<f5>") 'revert-buffer)
+(global-set-key (kbd "<f6>") 'revert-buffer)
 (global-set-key (kbd "M-x") 'helm-M-x)
 (global-set-key (kbd "C-x g") 'magit-status)
 (global-set-key (kbd "<f4>") 'helm-buffers-list)
 (global-set-key (kbd "<M-f1>") 'helm-dash)
-(global-set-key (kbd "C-<f6>") 'compile)
-(global-set-key (kbd "<f6>") 'recompile)
+(global-set-key (kbd "C-<f5>") 'compile)
+(global-set-key (kbd "<f5>") 'quickrun)
 (global-set-key (kbd "<f2>") 'helm-projectile)
 
 (use-package auto-complete
@@ -72,4 +72,7 @@
 :ensure t)
  
 (use-package sqlite
+:ensure t)
+
+(use-package quickrun
 :ensure t)
