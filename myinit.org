@@ -21,9 +21,6 @@
      (add-hook 'find-file-hook (lambda () (linum-mode 1)))
      (windmove-default-keybindings 'meta)
 
-     (custom-set-variables
-     '(initial-frame-alist (quote ((fullscreen . maximized)))))
-
      (setq backup-directory-alist
            `((".*" . ,temporary-file-directory)))
      (setq auto-save-file-name-transforms
