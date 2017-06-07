@@ -65,6 +65,37 @@
     :ensure t)
 #+END_SRC
 * Programming
+** Golang
+
+   #+BEGIN_SRC emacs-lisp
+
+(use-package go-mode
+  :ensure t)
+
+(use-package go-autocomplete
+  :ensure t)
+
+(defun my-go-mode-hook ()
+  (interactive)
+  ; Call Gofmt before saving
+  (add-hook 'before-save-hook 'gofmt-before-save)
+
+  ; Customize compile command to run go build
+  (if (not (string-match "go" compile-command))
+      (set (make-local-variable 'compile-command)
+           "go build -v -gcflags '-N -l' && go test -v && go vet"))
+  
+  ; Godef jump key binding
+  (local-set-key (kbd "M-.") 'godef-jump)
+  (require 'go-autocomplete)
+
+  (setq-local helm-dash-docsets '("Go"))
+  (message "Go Hook loaded"))
+ 
+(add-hook 'go-mode-hook 'my-go-mode-hook)
+
+   #+END_SRC
+    
 ** Python
 *** Autocomplete
    #+BEGIN_SRC emacs-lisp
@@ -99,6 +130,28 @@
 
    #+END_SRC
 
+** TypeScrip
+#+BEGIN_SRC emacs-lisp
+
+
+(use-package tide
+  :ensure t)
+
+(use-package typescript-mode
+  :ensure t)
+
+(defun setup-tide-mode ()
+  (interactive)
+  (tide-setup)
+  (flycheck-mode +1)
+  (setq flycheck-check-syntax-automatically '(save mode-enabled))
+  (eldoc-mode +1)
+  (tide-hl-identifier-mode +1))
+ 
+(add-hook 'before-save-hook 'tide-format-before-save)
+(add-hook 'typescript-mode-hook #'setup-tide-mode)
+
+   #+END_SRC
 ** Dataformats
    #+BEGIN_SRC emacs-lisp
    (use-package json-mode
