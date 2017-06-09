@@ -26,6 +26,9 @@
      (setq auto-save-file-name-transforms
            `((".*" ,temporary-file-directory t)))
 
+
+     (add-hook 'prog-mode-hook #'hs-minor-mode)
+
    #+END_SRC
 ** Keybindings
    #+BEGIN_SRC emacs-lisp
@@ -38,7 +41,8 @@
      (global-set-key (kbd "C-<f5>") 'compile)
      (global-set-key (kbd "<f5>") 'quickrun)
      (global-set-key (kbd "<f2>") 'helm-projectile)
-   #+END_SRC
+     (global-set-key (kbd "C-c C-o") 'hs-toggle-hiding)
+#+END_SRC
 
 * Autocomplete
   #+BEGIN_SRC emacs-lisp
@@ -51,7 +55,7 @@
     (global-auto-complete-mode t)
 
   #+END_SRC
-
+  
 * Add Ons
 ** Magit
   #+BEGIN_SRC emacs-lisp 
