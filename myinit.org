@@ -69,6 +69,21 @@
     :ensure t)
 #+END_SRC
 * Programming
+** Groovy
+   #+BEGIN_SRC emacs-lisp
+   
+   (use-package groovy-mode
+   :ensure t)
+
+   #+END_SRC
+
+** Jenkins
+   #+BEGIN_SRC emacs-lisp
+   (add-to-list 'auto-mode-alist
+             '("Jenkinsfile" . groovy-mode))
+
+   #+END_SRC
+
 ** Golang
 
    #+BEGIN_SRC emacs-lisp
@@ -133,7 +148,7 @@
    (add-hook 'python-mode-hook 'py-autopep8-enable-on-save)
 
    #+END_SRC
-
+    
 ** TypeScrip
 #+BEGIN_SRC emacs-lisp
 
