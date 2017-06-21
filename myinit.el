@@ -125,3 +125,9 @@
 
 (use-package quickrun
 :ensure t)
+
+(use-package nyan-mode
+:ensure t)
+
+(nyan-mode)
+(nyan-start-animation)

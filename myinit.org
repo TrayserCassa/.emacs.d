@@ -191,3 +191,14 @@
    :ensure t)
 
    #+END_SRC
+* Random Stuff
+** Nyan Cat
+   #+BEGIN_SRC emacs-lisp
+   
+   (use-package nyan-mode
+   :ensure t)
+
+   (nyan-mode)
+   (nyan-start-animation)
+
+   #+END_SRC
