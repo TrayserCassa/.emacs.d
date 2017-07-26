@@ -25,15 +25,21 @@
     :ensure t)
 
 (defvar quote-url "http://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1")
+(defvar session-qoute)
 
+(defun get-session-quote() 
+   (interactive)
+   (insert session-quote)
+   
+)
 
 (request
  "http://httpbin.org/get"
- :params '(("key" . "value") ("key2" . "value2"))
  :parser 'json-read
  :success (function
            (lambda (&key data &allow-other-keys)
-             (message "I sent: %S" (assoc-default 'args data)))))
+             (setq session-qoute data)
+             (insert "I sent: %S" (assoc-default 'args data)))))
     
      #+END_SRC
     
@@ -88,6 +94,18 @@
   #+END_SRC
   
 * Add Ons
+** REST Client
+#+BEGIN_SRC emacs-lisp 
+ (use-package restclient  
+  :ensure t)
+ 
+ (setq auto-mode-alist
+   (append
+     '(("\\.http\\'" . restclient-mode))
+     auto-mode-alist))
+
+  #+END_SRC
+
 ** Magit
   #+BEGIN_SRC emacs-lisp 
  (use-package magit
