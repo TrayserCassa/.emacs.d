@@ -79,6 +79,7 @@
      (global-set-key (kbd "<f5>") 'quickrun)
      (global-set-key (kbd "<f2>") 'helm-projectile)
      (global-set-key (kbd "C-c C-o") 'hs-toggle-hiding)
+     (global-set-key (kbd "<f6>") 'query-replace)
 #+END_SRC
 
 * Autocomplete
