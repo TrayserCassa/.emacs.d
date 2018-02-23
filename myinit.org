@@ -66,6 +66,8 @@
 
      (add-hook 'prog-mode-hook #'hs-minor-mode)
 
+     (server-start)
+
    #+END_SRC
 ** Keybindings
    #+BEGIN_SRC emacs-lisp
