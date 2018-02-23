@@ -45,9 +45,9 @@
     
 ** Theme
    #+BEGIN_SRC emacs-lisp
-     (use-package zenburn-theme
+     (use-package seti-theme
        :ensure t)
-     (load-theme 'zenburn t)
+     (load-theme 'seti t)
    #+END_SRC
 ** Basic Settings
    #+BEGIN_SRC emacs-lisp
