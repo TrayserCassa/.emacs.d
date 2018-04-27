@@ -72,12 +72,12 @@
 ** Keybindings
    #+BEGIN_SRC emacs-lisp
      (global-set-key (kbd "<f1>") 'describe-mode) 
-     (global-set-key (kbd "<f6>") 'revert-buffer)
+     
      (global-set-key (kbd "M-x") 'helm-M-x)
      (global-set-key (kbd "C-x g") 'magit-status)
      (global-set-key (kbd "<f4>") 'helm-buffers-list)
      (global-set-key (kbd "<M-f1>") 'helm-dash)
-     (global-set-key (kbd "C-<f5>") 'compile)
+     (global-set-key (kbd "<f6>") 'compile)
      (global-set-key (kbd "<f5>") 'quickrun)
      (global-set-key (kbd "<f2>") 'helm-projectile)
      (global-set-key (kbd "C-c C-o") 'hs-toggle-hiding)
