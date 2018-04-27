@@ -87,7 +87,6 @@
      (global-set-key (kbd "<f2>") 'helm-projectile)
      (global-set-key (kbd "C-c C-o") 'hs-toggle-hiding)
      (global-set-key (kbd "C-c C-c") 'comment-or-uncomment-region)
-     (global-set-key (kbd "<f12>") (lambda () (interactive) (jedi:goto-definition)))
 #+END_SRC
 
 * Autocomplete
