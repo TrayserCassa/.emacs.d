@@ -87,6 +87,10 @@
      (global-set-key (kbd "<f2>") 'helm-projectile)
      (global-set-key (kbd "C-c C-o") 'hs-toggle-hiding)
      (global-set-key (kbd "C-c C-c") 'comment-or-uncomment-region)
+
+     (global-set-key (kbd "<f12>") 'undo)
+     (global-set-key (kbd "<f8>") 'neotree-toggle)
+
 #+END_SRC
 
 * Autocomplete
@@ -102,6 +106,11 @@
   #+END_SRC
   
 * Add Ons
+** Tree View
+#+BEGIN_SRC emacs-lisp 
+ (use-package neotree  
+  :ensure t)
+  #+END_SRC
 ** REST Client
 #+BEGIN_SRC emacs-lisp 
  (use-package restclient  
@@ -113,7 +122,6 @@
      auto-mode-alist))
 
   #+END_SRC
-
 ** Magit
   #+BEGIN_SRC emacs-lisp 
  (use-package magit
