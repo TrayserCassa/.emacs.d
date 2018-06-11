@@ -55,7 +55,6 @@
      (setq-default indent-tabs-mode nil)
      (set-default 'truncate-lines t)
      
-     (add-hook 'find-file-hook (lambda () (linum-mode 1)))
      (windmove-default-keybindings 'meta)
 
      (setq backup-directory-alist
