@@ -105,10 +105,8 @@
      (global-set-key (kbd "M-S-<right>") 'shrink-window-horizontally)
      (global-set-key (kbd "M-S-<up>") 'shrink-window)
 
-     (global-set-key (kbd "M-n") 'next-line)
-     (global-set-key (kbd "M-p") 'previous-line)
-     (global-set-key (kbd "C-n") 'go-next-number-lines)
-     (global-set-key (kbd "C-p") 'go-previous-number-lines)
+     (global-set-key (kbd "M-n") 'go-next-number-lines)
+     (global-set-key (kbd "M-p") 'go-previous-number-lines)
 
      (global-set-key [next] (lambda () (interactive) (scroll-up 5)))
      (global-set-key [prior] (lambda () (interactive) (scroll-down 5)))
