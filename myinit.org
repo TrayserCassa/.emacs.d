@@ -118,7 +118,7 @@
  
  (setq auto-mode-alist
    (append
-     '(("\\.res\\'" . restclient-mode))
+     '(("\\.rest\\'" . restclient-mode))
      auto-mode-alist))
 
   #+END_SRC
