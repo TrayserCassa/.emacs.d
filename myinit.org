@@ -66,6 +66,7 @@
    #+BEGIN_SRC emacs-lisp
      (fset 'yes-or-no-p 'y-or-n-p)
      (setq-default indent-tabs-mode nil)
+     (put 'scroll-left 'disabled nil)
      (set-default 'truncate-lines t)
      
      (windmove-default-keybindings 'meta)
