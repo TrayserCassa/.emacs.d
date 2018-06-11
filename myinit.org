@@ -1,4 +1,17 @@
 * Generell stuff
+** Functions
+   #+BEGIN_SRC emacs-lisp
+   (defun go-previous-number-lines(number)
+   "Go n numbers up"
+   (interactive "nLines up:")
+   (previous-line number))
+
+   (defun go-next-number-lines(number)
+   "Go n numbers down"
+   (interactive "nLines down:")
+   (next-line number))
+#+END_SRC
+
 ** Interface
 *** Hide Gui things
      #+BEGIN_SRC emacs-lisp
