@@ -92,6 +92,11 @@
      (global-set-key (kbd "M-S-<right>") 'shrink-window-horizontally)
      (global-set-key (kbd "M-S-<up>") 'shrink-window)
 
+     (global-set-key (kbd "M-n") 'next-line)
+     (global-set-key (kbd "M-p") 'previous-line)
+     (global-set-key (kbd "C-n") 'go-next-number-lines)
+     (global-set-key (kbd "C-p") 'go-previous-number-lines)
+
      (global-set-key (kbd "M-x") 'helm-M-x)
      (global-set-key (kbd "C-x g") 'magit-status)
      (global-set-key (kbd "<f4>") 'helm-buffers-list)
