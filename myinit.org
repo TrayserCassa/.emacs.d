@@ -31,16 +31,17 @@
       (scroll-bar-mode -1)
      
      #+END_SRC
-*** Splash screen
+*** Dashboard
      #+BEGIN_SRC emacs-lisp
+     (use-package dashboard
+     :config
+     (dashboard-setup-startup-hook))
+     (setq dashboard-banner-logo-title "¯\\_(ツ)_/¯")
+     (setq dashboard-startup-banner 'logo)
+     
+     (setq dashboard-items '((recents  . 10)
+                             (agenda . 10)))
 
-
-(use-package dashboard
-  :config
-  (dashboard-setup-startup-hook))
-
-(setq dashboard-banner-logo-title "(ᴗ˳ᴗ)")
-(setq dashboard-startup-banner 'logo)
 
      #+END_SRC
 *** get Random Quotes via https://quotesondesign.com/api-v4-0/
