@@ -1,2 +1,3 @@
-# emacs
-My Init Files
+# My Emacs Init File
+[File](myinit.org)
+
