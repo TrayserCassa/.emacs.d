@@ -1,6 +1,9 @@
+
 * Generell stuff
 ** Functions
+*** Generell Stuff
    #+BEGIN_SRC emacs-lisp
+
    (defun go-previous-number-lines(number)
    "Go n numbers up"
    (interactive "nLines up:")
@@ -21,7 +24,44 @@
    (defun scroll-down-half ()         
    (interactive)                    
    (scroll-down (window-half-height)))
+   
 #+END_SRC
+
+*** Dashboard Functions
+    #+BEGIN_SRC emacs-lisp
+
+    (defun dashboard-render-notes ()  
+    (insert "Notes:\n")
+    (dashboard-get-notes
+    (lambda (x) (insert (concat "    " x)))
+    ))
+
+    (defun dashboard-get-notes (func)
+      (setq todos ())
+      (org-map-entries
+        (lambda () 
+          (setq todos 
+            (cons (thing-at-point 'line t) todos)))
+        nil
+        'agenda  
+      )
+      (setq todos (reverse todos))
+      (loop for todo in todos do (funcall func todo))
+    )
+        
+    (defun dashboard-insert-notes (list-size)
+    (dashboard-render-notes)
+    (dashboard-insert-shortcut "n" "Notes:"))
+
+#+END_SRC
+
+** Org Mode
+  #+BEGIN_SRC emacs-lisp
+  (use-package org
+   :ensure t)
+  
+  (setq org-agenda-files (list "~/agenda/work.org"))
+   #+END_SRC
 
 ** Interface
 *** Hide Gui things
@@ -30,19 +70,6 @@
       (menu-bar-mode -1)
       (scroll-bar-mode -1)
      
-     #+END_SRC
-*** Dashboard
-     #+BEGIN_SRC emacs-lisp
-     (use-package dashboard
-     :config
-     (dashboard-setup-startup-hook))
-     (setq dashboard-banner-logo-title "¯\\_(ツ)_/¯")
-     (setq dashboard-startup-banner 'logo)
-     
-     (setq dashboard-items '((recents  . 10)
-                             (agenda . 10)))
-
-
      #+END_SRC
 *** get Random Quotes via https://quotesondesign.com/api-v4-0/
      #+BEGIN_SRC emacs-lisp
@@ -142,6 +169,23 @@
   #+END_SRC
   
 * Add Ons
+** Dashboard
+     #+BEGIN_SRC emacs-lisp
+     (use-package dashboard
+     :config
+     (dashboard-setup-startup-hook))
+     (setq dashboard-banner-logo-title "¯\\_(ツ)_/¯")
+     (setq dashboard-startup-banner 'logo)
+     
+     (setq show-week-agenda-p t)
+
+     (add-to-list 'dashboard-item-generators  '(notes . dashboard-insert-notes))
+     (setq dashboard-items '((recents . 10)(notes . 10)(bookmarks)(agenda . 10)))                            
+
+     (dashboard-insert-shortcut "b" "Bookmarks:")
+
+     #+END_SRC
+
 ** Tree View
 #+BEGIN_SRC emacs-lisp 
  (use-package neotree  
