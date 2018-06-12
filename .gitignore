@@ -1,4 +1,2 @@
-ac-comphist.dat
-auto-save-list/
-elpa/
-.python-environments/
+*
+!/myinit.org
