@@ -153,7 +153,9 @@
 
      (global-set-key (kbd "<f12>") 'undo)
      (global-set-key (kbd "<f8>") 'neotree-toggle)
-
+     (global-set-key (kbd "C-S-f") 'rgrep)
+     (global-set-key (kbd "C-R") 'query-replace)
+     
 #+END_SRC
 
 * Autocomplete
