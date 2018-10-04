@@ -252,7 +252,7 @@
    #+END_SRC
 
 ** Golang
-
+*** General
    #+BEGIN_SRC emacs-lisp
 
 (use-package go-mode
@@ -282,6 +282,11 @@
 
    #+END_SRC
     
+*** Goto Project snipped
+#+BEGIN_SRC emacs-lisp    
+   (load "~/.emacs.d/local/goprojectfinder.el")       
+#+END_SRC    
+
 ** Python
 *** Autocomplete
    #+BEGIN_SRC emacs-lisp
