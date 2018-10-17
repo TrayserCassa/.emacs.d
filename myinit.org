@@ -126,6 +126,10 @@
    #+END_SRC
 ** Keybindings
    #+BEGIN_SRC emacs-lisp
+     (use-package evil
+     :ensure t)
+  
+
      (global-set-key (kbd "<f1>") 'describe-mode) 
      
      (global-set-key (kbd "M-S-<down>") 'enlarge-window)
