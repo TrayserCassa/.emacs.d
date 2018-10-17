@@ -289,11 +289,30 @@
 ** Python
 *** Autocomplete
    #+BEGIN_SRC emacs-lisp
-   (setq jedi:setup-keys t)
-   (setq jedi:use-shortcuts t)
+
+(defun python-hook-f()  
+  (let ((local-virtual-env (locate-dominating-file default-directory "virtualenv")))
+    (if (and local-virtual-env (file-exists-p local-virtual-env))
+         (progn
+           (setenv "VIRTUAL_ENV" (concat local-virtual-env "venv"))
+           (setq jedi:environment-root (concat local-virtual-env "virtualenv"))
+           (setq jedi:environment-virtualenv "virtualenv")
+
+        ))
+))
+
+
+
+   (add-hook 'python-mode-hook 'python-hook-f)
+
+   (use-package python-environment
+   :ensure t)
 
    (use-package jedi
    :ensure t)
+
+   (setq jedi:setup-keys t)
+   (setq jedi:use-shortcuts t)
 
    (add-hook 'python-mode-hook 'jedi:setup)
    (setq jedi:complete-on-dot t)  
