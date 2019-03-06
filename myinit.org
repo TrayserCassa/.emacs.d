@@ -304,12 +304,15 @@
 #+END_SRC    
 
 ** Python
-*** Autocomplete
+*** Virtual Env
    #+BEGIN_SRC emacs-lisp
 
    (use-package pyvenv
    :ensure t)
 
+   #+END_SRC
+*** Autocomplete
+   #+BEGIN_SRC emacs-lisp
 
    (use-package jedi
    :ensure t)
