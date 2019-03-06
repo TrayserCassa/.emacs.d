@@ -314,14 +314,12 @@
 *** Autocomplete
    #+BEGIN_SRC emacs-lisp
 
+   ; M-x jedi:install-server
    (use-package jedi
    :ensure t)
 
-   (setq jedi:setup-keys t)
-   (setq jedi:use-shortcuts t)
-
    (add-hook 'python-mode-hook 'jedi:setup)
-   (setq jedi:complete-on-dot t)  
+   (setq jedi:complete-on-dot t)
 
    #+END_SRC
    
