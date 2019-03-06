@@ -307,11 +307,6 @@
 *** Autocomplete
    #+BEGIN_SRC emacs-lisp
 
-   (add-hook 'python-mode-hook 'python-hook-f)
-
-   (use-package python-environment
-   :ensure t)
-
    (use-package pyvenv
    :ensure t)
 
