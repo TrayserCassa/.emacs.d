@@ -21,7 +21,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (evil lua-mode yasnippet yaml-mode use-package suscolors-theme sqlite s pyvenv magit json-mode highlight-indentation helm find-file-in-project company auto-complete))))
+    (magit jedi evil lua-mode yasnippet yaml-mode use-package suscolors-theme sqlite s pyvenv json-mode highlight-indentation helm find-file-in-project company auto-complete))))
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
