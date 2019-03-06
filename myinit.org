@@ -183,7 +183,7 @@
      (use-package dashboard
      :config
      (dashboard-setup-startup-hook))
-     (setq dashboard-banner-logo-title "¯\\_(ツ)_/¯")
+     (setq dashboard-banner-logo-title "¯\\_( ._. )_/¯")
      (setq dashboard-startup-banner 'logo)
      
      (setq show-week-agenda-p t)
