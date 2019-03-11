@@ -334,7 +334,8 @@
   
 *** PEP8
    #+BEGIN_SRC emacs-lisp
-   
+
+   ; Make sure you have autopep8 installed
    (use-package py-autopep8
    :ensure t)
 
