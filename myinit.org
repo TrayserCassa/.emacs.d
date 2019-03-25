@@ -304,7 +304,7 @@
     
 *** Goto Project snipped
 #+BEGIN_SRC emacs-lisp    
-   (load "~/.emacs.d/local/goprojectfinder.el")       
+   ;mama(load "~/.emacs.d/local/goprojectfinder.el")       
 #+END_SRC    
 
 ** Python
