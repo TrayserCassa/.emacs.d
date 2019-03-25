@@ -171,6 +171,10 @@
      (global-set-key (kbd "<f8>") 'neotree-toggle)
      (global-set-key (kbd "C-S-f") 'rgrep)
      (global-set-key (kbd "C-R") 'query-replace)
+
+     (global-set-key (kbd "M-.") 'jedi:goto-definition)
+     (global-set-key (kbd "M-,") 'jedi:goto-definition-pop-marker)
+
      
 #+END_SRC
 
