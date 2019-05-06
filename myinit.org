@@ -451,8 +451,8 @@
    (use-package nyan-mode
    :ensure t)
 
-   (nyan-mode)
-   (nyan-start-animation)
+   ;(nyan-mode)
+   ;(nyan-start-animation)
 
    #+END_SRC
 ** Markdown   
