@@ -109,9 +109,9 @@
     
 ** Theme
    #+BEGIN_SRC emacs-lisp
-     (use-package seti-theme
+     (use-package moe-theme
        :ensure t)
-     (load-theme 'seti t)
+     (load-theme 'moe-dark t)
    #+END_SRC
 ** Basic Settings
    #+BEGIN_SRC emacs-lisp
