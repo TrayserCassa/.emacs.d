@@ -112,6 +112,9 @@
      (use-package moe-theme
        :ensure t)
      (load-theme 'moe-dark t)
+     
+     (set-face-attribute 'region nil :background "dim gray" :foreground "dim gray")
+
    #+END_SRC
 ** Basic Settings
    #+BEGIN_SRC emacs-lisp
