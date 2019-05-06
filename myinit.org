@@ -193,6 +193,14 @@
   #+END_SRC
   
 * Add Ons
+** Powerline
+     #+BEGIN_SRC emacs-lisp
+     (use-package powerline
+     :ensure t)
+
+     (powerline-moe-theme)
+
+     #+END_SRC
 ** Dashboard
      #+BEGIN_SRC emacs-lisp
      (use-package dashboard
