@@ -112,7 +112,7 @@
      (use-package moe-theme
        :ensure t)
      (load-theme 'moe-dark t)
-     
+     (moe-theme-set-color 'orange)
      (set-face-attribute 'region nil :background "dim gray" :foreground "dim gray")
 
    #+END_SRC
