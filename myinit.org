@@ -406,6 +406,14 @@
    :ensure t)
 
    #+END_SRC
+** Latex
+   #+BEGIN_SRC emacs-lisp
+
+   (use-package auctex
+   :ensure t)
+
+   #+END_SRC
+
 * Random Stuff
 ** Nyan Cat
    #+BEGIN_SRC emacs-lisp
