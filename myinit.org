@@ -178,7 +178,6 @@
 
      
 #+END_SRC
-
 * Autocomplete
   #+BEGIN_SRC emacs-lisp
     (use-package auto-complete
@@ -208,22 +207,22 @@
 
      #+END_SRC
 ** Dashboard
-     #+BEGIN_SRC emacs-lisp
+#+BEGIN_SRC emacs-lisp
      (use-package dashboard
-     :config
-     (dashboard-setup-startup-hook))
+       :config
+       (dashboard-setup-startup-hook))
+
      (setq dashboard-banner-logo-title "¯\\_( ._. )_/¯")
      (setq dashboard-startup-banner 'logo)
-     
-     (setq show-week-agenda-p t)
+     (setq dashboard-center-content t)
 
      (add-to-list 'dashboard-item-generators  '(notes . dashboard-insert-notes))
      (setq dashboard-items '((recents . 10)(notes . 10)(bookmarks)(agenda . 10)))                            
 
+     (setq show-week-agenda-p t)
+
      (dashboard-insert-shortcut "b" "Bookmarks:")
-
-     #+END_SRC
-
+#+END_SRC
 ** Neotree
 #+BEGIN_SRC emacs-lisp 
 
@@ -241,7 +240,6 @@
 
 #+END_SRC
  
-
 ** Tree View Disabled
 #+BEGIN_SRC emacs-lisp 
 
