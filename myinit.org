@@ -109,12 +109,11 @@
     
 ** Theme
    #+BEGIN_SRC emacs-lisp
-     (use-package moe-theme
-       :ensure t)
-     (load-theme 'moe-dark t)
-     (moe-theme-set-color 'orange)
-     (set-face-attribute 'region nil :background "dim gray" :foreground "dim gray")
 
+   (use-package gruvbox-theme
+     :ensure t)
+   (load-theme 'gruvbox-dark-medium t)
+   
    #+END_SRC
 ** Basic Settings
    #+BEGIN_SRC emacs-lisp
@@ -201,6 +200,10 @@
      (use-package powerline
      :ensure t)
 
+     (use-package moe-theme
+     :ensure t)
+     
+     (moe-theme-set-color 'orange)
      (powerline-moe-theme)
 
      #+END_SRC
