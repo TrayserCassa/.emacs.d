@@ -209,6 +209,7 @@
 ** Dashboard
 #+BEGIN_SRC emacs-lisp
      (use-package dashboard
+       :ensure t
        :config
        (dashboard-setup-startup-hook))
 
